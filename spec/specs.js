@@ -3,12 +3,16 @@ describe('leapYear', function() {
     expect(leapYear(1999)).to.equal(false);
   });
 
-  it("is false for a year that is not divisible by 4", function () {
+  it("is true for most years divisible by 4", function () {
     expect(leapYear(2012)).to.equal(true);
   });
 
-  it("is false for a year that is not divisible by 4", function () {
+  it("is false for most years divisible by 100", function () {
     expect(leapYear(1900)).to.equal(false);
+  });
+
+  it("is true for a year that is divisible by 400", function () {
+    expect(leapYear(2020)).to.equal(true);
   });
 
 });
